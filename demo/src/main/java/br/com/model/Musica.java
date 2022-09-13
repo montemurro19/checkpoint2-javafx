@@ -5,12 +5,14 @@ public class Musica {
     private String titulo;
     private String album;
     private String artista;
+    private String genero;
     private String nota;
 
-    public Musica(String titulo, String album, String artista, String nota) {
+    public Musica(String titulo, String album, String artista, String genero, String nota) {
         this.titulo = titulo;
         this.album = album;
         this.artista = artista;
+        this.genero = genero;
         this.nota = nota;
     }
 
@@ -38,6 +40,14 @@ public class Musica {
         this.artista = artista;
     }
 
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
     public String getNota() {
         return nota;
     }
@@ -48,7 +58,7 @@ public class Musica {
 
     @Override
     public String toString() {
-        return "Musica [album=" + album + ", artista=" + artista + ", nota=" + nota + ", titulo=" + titulo + "]";
+        return "Musica [album=" + album + ", artista=" + artista + ", genero=" + genero + ", nota=" + nota + ", titulo=" + titulo + "]";
     }
 
 }

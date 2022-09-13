@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="br.com.fiap.PrimaryController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fiap.PrimaryController">
   <tabs>
     <Tab text="Cadastro">
       <content>
@@ -47,8 +47,8 @@
                         <ChoiceBox fx:id="choiceBoxNota" prefHeight="25.0" prefWidth="253.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                         <TextField fx:id="textFieldIdAlbum" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="textFieldIdArtista" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <CheckBox mnemonicParsing="false" text="Adicionar as favoritas" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="checkBoxFavorito" mnemonicParsing="false" text="Adicionar as favoritas" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="textFieldIdGenero" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                      </children>
                      <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -66,9 +66,9 @@
                         <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER_LEFT">
                           <buttons>
                               <Label text="Ordenar por:" />
-                              <Button mnemonicParsing="false" text="Nota" />
-                              <Button mnemonicParsing="false" text="Categoria" />
-                            <Button mnemonicParsing="false" text="Artista" />
+                              <Button mnemonicParsing="false" onAction="#ordenarPorNota" text="Nota" />
+                              <Button mnemonicParsing="false" onAction="#ordenarPorCategoria" text="Categoria" />
+                            <Button mnemonicParsing="false" onAction="#ordenarPorArtista" text="Artista" />
                           </buttons>
                            <padding>
                               <Insets left="15.0" right="15.0" />
@@ -76,7 +76,7 @@
                         </ButtonBar>
                      </top>
                      <center>
-                        <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                        <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                      </center>
                   </BorderPane>
                </children></AnchorPane>
@@ -84,7 +84,14 @@
     </Tab>
       <Tab text="Favoritas">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <BorderPane prefHeight="373.0" prefWidth="600.0">
+                     <center>
+                        <ListView fx:id="listView2" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </children></AnchorPane>
         </content>
       </Tab>
   </tabs>
