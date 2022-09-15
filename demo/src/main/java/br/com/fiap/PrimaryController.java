@@ -112,6 +112,8 @@ public class PrimaryController implements Initializable{
 
         listView.getItems().clear();
         listView.getItems().addAll(lista);
+        listView2.getItems().clear();
+        listView2.getItems().addAll(lista);
 
     }
 

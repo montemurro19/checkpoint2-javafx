@@ -90,6 +90,19 @@
                      <center>
                         <ListView fx:id="listView2" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
                      </center>
+                     <top>
+                        <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <buttons>
+                              <Label text="Ordenar por:" />
+                            <Button mnemonicParsing="false" onAction="#ordenarPorNota" text="Nota" />
+                              <Button mnemonicParsing="false" onAction="#ordenarPorCategoria" text="Genêro Musical" />
+                              <Button mnemonicParsing="false" onAction="#ordenarPorArtista" text="Artista" />
+                          </buttons>
+                           <padding>
+                              <Insets right="15.0" />
+                           </padding>
+                        </ButtonBar>
+                     </top>
                   </BorderPane>
                </children></AnchorPane>
         </content>
