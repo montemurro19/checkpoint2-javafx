@@ -1,10 +1,7 @@
 package br.com.fiap;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -102,15 +99,13 @@ public class PrimaryController implements Initializable{
     }
 
     public void ordenarPorCategoria(){
-        //falta fazer
-        System.out.println("ordenar categoria");
-        
+        lista.sort((o1, o2) -> o1.getGenero().compareTo(o2.getGenero()));
+        atualizarLista();        
     }
 
     public void ordenarPorArtista(){
-        //falta fazer
-        System.out.println("ordenar artista");
-        
+        lista.sort((o1, o2) -> o1.getArtista().compareTo(o2.getArtista()));
+        atualizarLista();        
     }
 
     public void atualizarLista(){
@@ -123,7 +118,6 @@ public class PrimaryController implements Initializable{
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         List<String>  notas = new  ArrayList<>();
-//pra que caralhos serve aquele "e:" perguntar quinta
         notas.add("1");
         notas.add("2");
         notas.add("3");

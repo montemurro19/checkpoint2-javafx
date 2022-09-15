@@ -58,7 +58,8 @@ public class Musica {
 
     @Override
     public String toString() {
-        return "Musica [album=" + album + ", artista=" + artista + ", genero=" + genero + ", nota=" + nota + ", titulo=" + titulo + "]";
+        //return "Musica [album=" + album + ", artista=" + artista + ", genero=" + genero + ", nota=" + nota + ", titulo=" + titulo + "]";
+        return titulo + " - álbum: " + album + " - artista: " + artista + " - gênero: " + genero + " - nota: " + nota;
     }
 
 }
